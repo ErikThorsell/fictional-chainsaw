@@ -1,11 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func square(i int) int {
-    return i*i
+	return i * i
 }
 
 func main() {
-    fmt.Println(square(2))
+	fmt.Println(square(2))
 }
