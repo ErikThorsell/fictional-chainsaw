@@ -1,3 +1,3 @@
 module github.com/ErikThorsell/fictional-chainsaw
 
-go 1.15
+go 1.16
