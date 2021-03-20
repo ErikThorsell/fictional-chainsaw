@@ -28,12 +28,13 @@ jobs:
           go get -u golang.org/x/lint/golint
 
       - name: Run build
-        run: go build .
+        run: go build cmd/fictional-chainsaw/*
 
       - name: Run vet & lint
         run: |
-          go vet .
-          golint .
+          go vet cmd/fictional-chainsaw/*
+          golint cmd/fictional-chainsaw/*
+
 
       - name: Run tests
-        run: go test -v
+        run: go test -v cmd/fictional-chainsaw/*
