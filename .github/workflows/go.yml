@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -35,6 +35,8 @@ jobs:
           go vet cmd/fictional-chainsaw/*
           golint cmd/fictional-chainsaw/*
 
-
       - name: Run tests
         run: go test -v cmd/fictional-chainsaw/*
+
+      - name: Containerize
+        run: docker build --tag web-calculator .
