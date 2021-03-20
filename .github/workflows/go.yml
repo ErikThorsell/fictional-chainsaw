@@ -35,6 +35,5 @@ jobs:
           go vet cmd/fictional-chainsaw/*
           golint cmd/fictional-chainsaw/*
 
-
       - name: Run tests
         run: go test -v cmd/fictional-chainsaw/*
